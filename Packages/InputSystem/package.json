@@ -1,0 +1,11 @@
+{
+  "name": "com.muhua.inputsystem",
+  "version": "0.0.1",
+  "displayName": "MuHua InputSystem",
+  "description": "\u4f7f\u7528\u4e8b\u4ef6\u7684\u65b9\u5f0f\u7ba1\u7406\u8f93\u5165",
+  "author": {
+    "name": "MuHua",
+    "email": "2960208585@qq.com"
+  },
+  "type": "tool"
+}
