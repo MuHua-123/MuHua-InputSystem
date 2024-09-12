@@ -12,4 +12,4 @@
 
 #### 安装版本
 * **最新版：** https://github.com/MuHua-123/MuHua-InputSystem.git?path=Packages/InputSystem
-* **可选目标** https://github.com/MuHua-123/MuHua-InputSystem.git?path=Packages/InputSystem#0.1.0
+* **可选目标** https://github.com/MuHua-123/MuHua-InputSystem.git?path=Packages/InputSystem#0.1.1
