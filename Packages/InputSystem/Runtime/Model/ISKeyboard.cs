@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace MuHua.InputSystem {
-    public class ISKeyboard {
+    internal class ISKeyboard {
         public KeyCode KeyCode;
         public bool IsDown;
         public event Action OnDown;

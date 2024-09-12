@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace MuHua.InputSystem {
-    public class ISMouse {
+    internal class ISMouse {
         public int Index;
         public bool IsDown;
         public event Action OnDown;

@@ -59,9 +59,9 @@ namespace MuHua.InputSystem {
             scrollWheel.Scroll(scrollWheelValue);
         }
         private void UpdateKeyboardInput(KeyCode keyCode, ISKeyboard keyboard) {
-            if (Input.GetKeyDown(keyCode)) { keyboard.Up(); keyboard.IsDown = false; }
+            if (Input.GetKeyDown(keyCode)) { keyboard.Down(); keyboard.IsDown = false; }
             if (keyboard.IsDown) { keyboard.Press(); }
-            if (Input.GetKeyUp(keyCode)) { keyboard.Down(); keyboard.IsDown = true; }
+            if (Input.GetKeyUp(keyCode)) { keyboard.Up(); keyboard.IsDown = true; }
         }
     }
 }

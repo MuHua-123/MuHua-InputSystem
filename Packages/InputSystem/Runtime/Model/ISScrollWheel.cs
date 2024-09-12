@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace MuHua.InputSystem {
-    public class ISScrollWheel {
+    internal class ISScrollWheel {
         public bool IsOver;
         public event Action<float> OnScroll;
 
