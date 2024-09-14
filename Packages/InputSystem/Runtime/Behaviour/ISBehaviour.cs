@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace MuHua.InputSystem {
-    internal class ISBehaviour : MonoBehaviour {
+    public class ISBehaviour : MonoBehaviour {
         private Dictionary<int, ISMouse> MouseDictionary => ISModel.I.MouseDictionary;
         private Dictionary<int, ISMouse> MouseOverDictionary => ISModel.I.MouseOverDictionary;
         private Dictionary<bool, ISScrollWheel> ScrollWheelDictionary => ISModel.I.ScrollWheelDictionary;
