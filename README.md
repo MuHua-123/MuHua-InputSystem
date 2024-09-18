@@ -8,8 +8,6 @@
   * 确保电脑安装git
   * 在Unity Package Manager选择添加来自gitURL的包
   * 输入URL：https://github.com/MuHua-123/MuHua-InputSystem.git?path=Packages/InputSystem
+  * 可选版本，在url后面加上Tag
+  * 例：https://github.com/MuHua-123/MuHua-InputSystem.git?path=Packages/InputSystem#0.2.0
 * **方法2：** Fork本仓库到本地，拷贝[**InputSystem**](Packages/InputSystem) 文件夹至项目中。
-
-#### 安装版本
-* **最新版：** https://github.com/MuHua-123/MuHua-InputSystem.git?path=Packages/InputSystem
-* **可选目标** https://github.com/MuHua-123/MuHua-InputSystem.git?path=Packages/InputSystem#0.2.1
