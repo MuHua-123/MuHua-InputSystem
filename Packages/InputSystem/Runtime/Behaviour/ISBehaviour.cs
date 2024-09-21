@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 
 namespace MuHua.InputSystem {
     public class ISBehaviour : MonoBehaviour {
-        private Dictionary<int, ISMouse> MouseDictionary => ISModel.I.MouseDictionary;
-        private Dictionary<int, ISMouse> MouseOverDictionary => ISModel.I.MouseOverDictionary;
-        private Dictionary<bool, ISScrollWheel> ScrollWheelDictionary => ISModel.I.ScrollWheelDictionary;
-        private Dictionary<KeyCode, ISKeyboard> KeyboardDictionary => ISModel.I.KeyboardDictionary;
-
+        private Dictionary<int, ISMouse> MouseDic => ISModel.I.MouseDic;
+        private Dictionary<int, ISMouseOver> MouseOverDic => ISModel.I.MouseOverDic;
+        private Dictionary<bool, ISScrollWheel> ScrollWheelDic => ISModel.I.ScrollWheelDic;
+        private Dictionary<KeyCode, ISKeyboard> KeyboardDic => ISModel.I.KeyboardDic;
+        
         private bool IsEventSystem {
             get { return EventSystem.current != null; }
         }
@@ -29,17 +29,17 @@ namespace MuHua.InputSystem {
 #endif
         }
         private void Update() {
-            foreach (KeyValuePair<int, ISMouse> item in MouseDictionary) {
+            foreach (KeyValuePair<int, ISMouse> item in MouseDic) {
                 UpdateMouseInput(item.Key, item.Value);
             }
-            foreach (KeyValuePair<int, ISMouse> item in MouseOverDictionary) {
+            foreach (KeyValuePair<int, ISMouseOver> item in MouseOverDic) {
                 UpdateMouseOverInput(item.Key, item.Value);
             }
-            foreach (KeyValuePair<bool, ISScrollWheel> item in ScrollWheelDictionary) {
+            foreach (KeyValuePair<bool, ISScrollWheel> item in ScrollWheelDic) {
                 float scrollWheelValue = Input.GetAxis("Mouse ScrollWheel");
                 UpdateScrollWheelInput(scrollWheelValue, item.Key, item.Value);
             }
-            foreach (KeyValuePair<KeyCode, ISKeyboard> item in KeyboardDictionary) {
+            foreach (KeyValuePair<KeyCode, ISKeyboard> item in KeyboardDic) {
                 UpdateKeyboardInput(item.Key, item.Value);
             }
         }
@@ -48,7 +48,7 @@ namespace MuHua.InputSystem {
             if (mouse.IsDown) { mouse.Press(); }
             if (Input.GetMouseButtonDown(index)) { mouse.Down(); mouse.IsDown = true; }
         }
-        private void UpdateMouseOverInput(int index, ISMouse mouse) {
+        private void UpdateMouseOverInput(int index, ISMouseOver mouse) {
             if (Input.GetMouseButtonUp(index)) { mouse.Up(); mouse.IsDown = false; }
             if (IsEventSystem && IsPointerOverGameObject) { return; }
             if (mouse.IsDown) { mouse.Press(); }

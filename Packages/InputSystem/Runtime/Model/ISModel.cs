@@ -5,14 +5,16 @@ using UnityEngine;
 
 namespace MuHua.InputSystem {
     internal class ISModel {
+        public static ISModel I => Instantiate();
+
         private static ISModel model;
-        public static ISModel I {
-            get { if (model == null) { model = new ISModel(); } return model; }
+        private static ISModel Instantiate() {
+            return model == null ? model = new ISModel() : model;
         }
 
-        public Dictionary<int, ISMouse> MouseDictionary = new Dictionary<int, ISMouse>();
-        public Dictionary<int, ISMouse> MouseOverDictionary = new Dictionary<int, ISMouse>();
-        public Dictionary<bool, ISScrollWheel> ScrollWheelDictionary = new Dictionary<bool, ISScrollWheel>();
-        public Dictionary<KeyCode, ISKeyboard> KeyboardDictionary = new Dictionary<KeyCode, ISKeyboard>();
+        public Dictionary<int, ISMouse> MouseDic = new Dictionary<int, ISMouse>();
+        public Dictionary<int, ISMouseOver> MouseOverDic = new Dictionary<int, ISMouseOver>();
+        public Dictionary<bool, ISScrollWheel> ScrollWheelDic = new Dictionary<bool, ISScrollWheel>();
+        public Dictionary<KeyCode, ISKeyboard> KeyboardDic = new Dictionary<KeyCode, ISKeyboard>();
     }
 }
