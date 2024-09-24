@@ -21,7 +21,7 @@ namespace MuHua.InputSystem {
         }
 
         /// <summary> 查找键盘输入模块 </summary>
-        public static ISKeyboard FindKeyboard(KeyCode keyCode) {
+        public static ISKeyboard Find(KeyCode keyCode) {
             if (ISModel.I.KeyboardDic.TryGetValue(keyCode, out ISKeyboard keyboard)) { return keyboard; }
             else { return new ISKeyboard(keyCode); }
         }
